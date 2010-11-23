@@ -1,0 +1,9 @@
+Waterloo Math Work Report LaTeX Template
+
+This is a /simple/ template for waterloo work reports in the Faculty of Mathematics.
+Clone it, look at "lorem.tex" for sample and make sure to include "mathwkrpt.sty"
+in your own file.
+
+I haven't changed this since 2008, so double check it still fits with the standards.
+
+A demo can be seen here: http://www.thomasdimson.com/lorem.pdf

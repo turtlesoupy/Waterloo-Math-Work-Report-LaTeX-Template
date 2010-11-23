@@ -1,0 +1,88 @@
+%Packages
+\usepackage{setspace}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{tocloft}
+\usepackage{listings}
+\usepackage{color}
+\usepackage[hmargin=1in,vmargin=1in]{geometry}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%       Formatting     %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\doublespacing
+\addtolength{\parskip}{\baselineskip}
+\setlength{\parindent}{0pt}
+\setlength{\cftsecnumwidth}{25pt}
+\setlength{\parskip}{1em}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% TEMPLATE DEFINITIONS %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Title template { Title } {Workplace } {Name/date }
+\newcommand{\waterlootitle}[3]{
+  \begin{singlespace}
+  \begin{titlepage}
+
+  \begin{center}
+
+  \textbf{\MakeUppercase{ University of Waterloo }} \\
+  \textbf{Faculty of Mathematics}
+
+  \vfill
+
+  {
+    \large
+    \textsc{\textbf{\textit{#1}}}
+  }
+
+  \vfill
+
+  #2
+
+  \vfill
+
+  prepared by \\[1em]
+  #3
+
+  \end{center}
+
+  \end{titlepage}
+  \end{singlespace}
+}
+
+\newcommand{\dotableofcontents}
+{
+\tableofcontents
+\listoffigures
+\newpage
+}
+
+\def\thesection{\arabic{section}.0 }
+\def\thesubsection{\arabic{section}.\arabic{subsection}}
+\renewcommand{\contentsname}{\begin{center}Table of Contents\end{center}}
+\renewcommand{\listfigurename}{\begin{center}List of Figures\end{center}}
+\renewcommand{\cftsecleader}{\bfseries\cftdotfill{\cftdotsep}}
+\renewcommand{\cftfigpresnum}{Figure }
+\renewcommand{\cftfigaftersnum}{ --- }
+\renewcommand{\cftfignumwidth}{65pt}
+\newcommand{\tocsection}[1]{ 
+\section*{#1}
+\addcontentsline{toc}{section}{#1}
+}
+\newenvironment{spaceditemize}{
+   \begin{list}{$\bullet$}
+    {
+      \setlength{\parskip}{0pt}
+    }}
+      {\end{list}\bigskip
+
+}
+
+\newenvironment{waterlooletter}{
+\begin{singlespace}}{
+\end{singlespace}
+\thispagestyle{empty}
+\newpage
+}
